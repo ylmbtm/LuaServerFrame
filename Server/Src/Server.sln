@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ServerEngine", "ServerEngine\ServerEngine.vcxproj", "{639FA6BE-9921-4385-9210-BD6CAC868D58}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{05FD3EE4-A29B-4738-B6D9-48F0AC336203}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ServerEngine_libuv", "ServerEngine_libuv\ServerEngine_libuv.vcxproj", "{73ED3DBA-7E01-4531-B4A6-C5CFA66EFEC1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ServerEngine_asio", "ServerEngine_asio\ServerEngine_asio.vcxproj", "{4D748B17-0220-45C8-9A08-3B3617ED0788}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LuaLuncher", "LuaLuncher\LuaLuncher.vcxproj", "{71A93901-1D18-4797-A67D-0E99BEAD8A26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{639FA6BE-9921-4385-9210-BD6CAC868D58}.Debug|x64.ActiveCfg = Debug|x64
+		{639FA6BE-9921-4385-9210-BD6CAC868D58}.Debug|x64.Build.0 = Debug|x64
+		{639FA6BE-9921-4385-9210-BD6CAC868D58}.Release|x64.ActiveCfg = Release|x64
+		{639FA6BE-9921-4385-9210-BD6CAC868D58}.Release|x64.Build.0 = Release|x64
+		{73ED3DBA-7E01-4531-B4A6-C5CFA66EFEC1}.Debug|x64.ActiveCfg = Debug|x64
+		{73ED3DBA-7E01-4531-B4A6-C5CFA66EFEC1}.Release|x64.ActiveCfg = Release|x64
+		{4D748B17-0220-45C8-9A08-3B3617ED0788}.Debug|x64.ActiveCfg = Debug|x64
+		{4D748B17-0220-45C8-9A08-3B3617ED0788}.Release|x64.ActiveCfg = Release|x64
+		{71A93901-1D18-4797-A67D-0E99BEAD8A26}.Debug|x64.ActiveCfg = Debug|x64
+		{71A93901-1D18-4797-A67D-0E99BEAD8A26}.Debug|x64.Build.0 = Debug|x64
+		{71A93901-1D18-4797-A67D-0E99BEAD8A26}.Release|x64.ActiveCfg = Release|x64
+		{71A93901-1D18-4797-A67D-0E99BEAD8A26}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA0067D5-F50E-4C52-BAA1-947ADEAF31A1}
+	EndGlobalSection
+EndGlobal

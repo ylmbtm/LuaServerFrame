@@ -1,0 +1,177 @@
+syntax = "proto3";
+import "Msg_Game.proto";
+
+//请求释放技能
+message SkillCastReq
+{    
+    uint64   ObjectGuid    = 1;
+    int32    SkillID       = 2;
+    float    HostX         = 3;
+    float    HostY         = 4;
+    float    HostZ         = 5;
+    float    HostFt        = 6;
+    float    TargetX       = 7;
+    float    TargetY       = 8;
+    float    TargetZ       = 9;
+    float    TargetFt      = 10;
+    repeated uint64 TargetObjects = 11;
+}
+
+//请求释放技能返回(如要释放是允许则没有这个返回)
+message SkillCastAck
+{    
+    uint32    RetCode = 1;  //是否释放成功, 失败原因。
+}
+
+//技能释放结果
+message SkillResultItem
+{    
+    uint64  ObjectGuid  = 1;    //目标的ID
+    int32   SkillID     = 2;    //被哪个技能击中了
+    int32   ActionID    = 3;    //现在需要什么动作
+    float   OrgX        = 4;    //被击中时的坐标
+    float   OrgY        = 5;    //被击中时的坐标
+    float   OrgZ        = 6;    //被击中时的坐标
+    float   OrgFt       = 7;    //被击中时的朝向
+    int32   HpChange    = 8;    //变化的血量
+    bool    bCrit       = 9;    //是否爆击
+}
+
+//技能释放结果
+message SkillResultNtf
+{    
+    repeated SkillResultItem ItemList = 1;
+}
+
+//移动动作请求
+message ObjectActionReq {
+   repeated    ActionReqItem ActionList = 1;
+}
+
+//移动动作请求
+message ObjectActionNty {
+   repeated ActionNtyItem ActionList = 1;
+}
+
+message ActionReqItem {
+    uint64   ObjectGuid  = 1;
+    int32    ActionID    = 2;
+    float    HostX       = 3;
+    float    HostY       = 4;
+    float    HostZ       = 5;
+    float    HostFt      = 6;
+}
+
+
+message ObjectActionAck {
+   repeated    ActionReqItem ActionList = 1;
+}
+
+message ActionNtyItem {
+    uint64   ObjectGuid    = 1;
+    int32    ActionID      = 2;        
+    int32    Camp          = 3;        //阵营
+    int32    ObjectStatus  = 4;        //实例状态
+    int32     Speed        = 5;
+    float    HostX         = 6;
+    float    HostY         = 7;
+    float    HostZ         = 8;
+    float    HostFt        = 9;
+    int32    ActorID       = 10;        //Actor ID
+    int32    MountID       = 11;        //坐骑ID
+    int32    Level         = 12;        //等级
+    uint64   ControlerID   = 13;        //AI控制人的GUID
+    int32    Hp            = 14;
+    int32    Mp            = 15;
+    int32    HpMax         = 16;
+    int32    MpMax         = 17;
+    repeated int32 Equips  = 18;         //装备
+}
+
+message NewItem {
+    uint64    ObjectGuid    = 1;        //实例ID
+    int32     ActionID      = 2;        
+    int32     ObjType       = 3;        //对象类别
+    int32     ObjectStatus  = 4;        //实例状态
+    int32     ActorID       = 5;        //Actor ID
+    int32     MountID       = 6;        //坐骑ID
+    int32     Camp          = 7;        //阵营
+    string    Name          = 8;        //名字
+    int32     Level         = 9;        //等级
+    int32     Speed         = 10;
+    uint64    HostGuid      = 11;       //主人的GUID
+    uint64    ControlerID   = 12;       //AI控制人的GUID
+    uint64    SummonID      = 13;       //招唤者的GUID
+    float     X             = 14;        
+    float     Y             = 15;
+    float     Z             = 16;
+    float     Ft            = 17;
+    int32     Hp            = 18;
+    int32     Mp            = 19;
+    int32     HpMax         = 20;
+    int32     MpMax         = 21;
+    repeated int32 Equips   = 22;       //装备
+    repeated SkillItem Skills= 23;      //普通技能
+}
+
+message ObjectNewNty {
+  repeated NewItem NewList = 1;
+}
+
+message ObjectRemoveNty {
+  repeated uint64 RemoveList = 1;
+}
+
+//子弹对象
+message BulletItem
+{    
+    uint64  ObjectGuid  = 1;    //对象ID
+    uint64  TargetGuid  = 2;    //目标GUID
+    uint64  CasterGuid  = 3;    //施放GUID
+    int32   BulletID    = 4;    //子弹的ID
+    float   X           = 5;    //坐标X
+    float   Y           = 6;    //坐标Y
+    float   Z           = 7;    //坐标X
+    float   Angle       = 8;    //角度
+    float   Speed       = 9;   //速度
+    float   AccSpeed    = 10;   //加速度
+    float   LifeTime    = 11;   //总生命时间
+    float   LeftTime    = 12;   //剩余时间
+}
+
+//技能释放结果
+message BulletNewNtf
+{    
+    repeated BulletItem ItemList = 1;
+}
+
+message HeartBeatReq {
+  uint32  TimeStamp = 1;
+}
+
+message HeartBeatAck {
+  uint32  TimeStamp = 1;
+  uint32  ServerTime = 2;
+}
+
+message ObjectDieNotify {
+  uint64  ObjectGuid = 1;
+}
+
+message Msg_RidingMountReq {
+   uint64   ObjectGuid    = 1;
+}
+
+message Msg_RidingMountAck {
+  uint32    RetCode = 1;  //是否成功, 失败原因。
+}
+
+
+message Msg_RoleRebornReq {
+   uint64   ObjectGuid    = 1;
+   int32    RebornType    = 2;
+}
+
+message Msg_RoleRebornAck {
+  uint32    RetCode = 1;  //是否成功, 失败原因。
+}

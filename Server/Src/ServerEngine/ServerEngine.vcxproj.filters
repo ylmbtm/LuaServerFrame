@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{fe1551b5-b5b2-4875-b079-2f2e3ce8619f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DBInterface">
+      <UniqueIdentifier>{63ab26cc-3f0e-4dcc-b2aa-940e2aa94be7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Connection.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="NetManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceBase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CrashReport.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonConvert.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonFunc.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonSocket.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="AstarFinder.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="SharedMemory.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigFile.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBuffer.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="TimerManager.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="DBInterface\CppMysql.cpp">
+      <Filter>DBInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="DBInterface\DBConnection.cpp">
+      <Filter>DBInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="DBInterface\DBRecordSet.cpp">
+      <Filter>DBInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="DBInterface\DBStoredProc.cpp">
+      <Filter>DBInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DFA.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandLine.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpParameter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Connection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NetManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CrashReport.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonConvert.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonFunc.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonSocket.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="AstarFinder.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigFile.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="EventFuncManager.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="TimerManager.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SharedMemory.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="DataBuffer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="DBInterface\CppMysql.h">
+      <Filter>DBInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="DBInterface\DBConnection.h">
+      <Filter>DBInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="DBInterface\DBRecordSet.h">
+      <Filter>DBInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="DBInterface\DBStoredProc.h">
+      <Filter>DBInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="LockFreeQueue.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="LockFreeQueueImpl.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="DBInterface\DBInterface.h">
+      <Filter>DBInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="XMath.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="DFA.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandLine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpParameter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rank.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SpinLock.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AVLTree.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="MemObjectPool.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

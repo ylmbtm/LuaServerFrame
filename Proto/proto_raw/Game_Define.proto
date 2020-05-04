@@ -1,0 +1,179 @@
+﻿syntax = "proto3";
+enum EObjectType {
+    OT_NONE   = 0;
+    OT_PLAYER = 1;  //玩家
+    OT_NPC    = 2;  //NPC
+    OT_MONSTER= 3;  //怪
+    OT_PET    = 4;  //宠物
+    OT_MOUNT  = 5;  //坐骑
+    OT_MACHINE= 6;  //机关
+    OT_PARTNER= 7;  //伙伴
+    OT_SUMMON = 8;  //招唤物
+}
+
+enum EActionType {
+    AT_NONE         = 0;    //无
+    AT_IDLE         = 1;    //待机
+    AT_FIXBODY      = 2;    //定身
+    AT_WALK         = 3;    //行走
+    AT_RUN          = 4;    //跑动
+    AT_FLY          = 5;    //飞行
+    
+    AT_SKILL        = 6;    //技能
+    AT_MINE         = 7;    //采集
+    AT_ROLL         = 8;    //翻滚
+    AT_JUMP         = 9;    //跳跃
+    AT_BORN         = 10;   //出生
+    AT_DANCE        = 11;   //跳舞
+    
+    AT_DEAD         = 12;   //死亡
+    AT_WOUND        = 13;   //受击
+    AT_BEATBACK     = 14;   //击退
+    AT_BEATDOWN     = 15;   //击倒
+    AT_BEATFLY      = 16;   //击飞
+}
+
+enum EActionStatue {
+    AS_NONE         = 0;          //无动作
+    AS_HURT         = 0x1;        //伤害
+    AS_START        = 0x2;        //开始动作
+    AS_END          = 0xfffffff;  //技能动作开始
+}
+    
+enum ECopyType {
+    CPT_NONE     = 0;        //无阵营
+    CPT_LOGIN    = 1;        //登陆副本
+    CPT_SELROLE  = 2;        //选角副本
+    CPT_CITY     = 3;        //主城
+    CPT_MAIN     = 4;        //主线副本
+    CPT_WORLD    = 5;        //大世界
+    CPT_END = 100;
+}
+
+enum EObjectStatus
+{
+    EOS_NONE            = 0;//无
+    EOS_DEAD            = 1;//死亡
+    EOS_NOT_MOVE        = 2;//不能移动
+    EOS_NOT_CAST        = 3;//不能放技能
+    EOS_NOT_BEHURT      = 4;//不能被攻击
+    EOS_NOT_BECONTROL   = 5;//无法被控制
+    EOS_STEALTH         = 6;//不能被看见
+    EOS_BLIND           = 7;//不能看见他人
+};
+
+
+enum EItemType
+{
+    EIT_NONE         = 0;
+    EIT_MONEY        = 1;
+    EIT_ACTION       = 2;
+    EIT_ITEM         = 3;
+    EIT_EQUIP        = 4;
+    EIT_GEM          = 5;
+    EIT_RELICS       = 6;
+    EIT_MOUNT        = 7;
+    EIT_PET          = 8;
+    EIT_PARTNER      = 9;
+    EIT_FASHION      = 10;
+    EIT_BOX          = 11;
+    EIT_ACTBOX       = 12;
+    EIT_CHIP         = 13; 
+    EIT_RUNE         = 14;
+    EIT_DRUG         = 15;
+}
+
+enum EBagType
+{
+    EBT_NONE    = 0;
+    EBT_ITEM    = 1;
+    EBT_GEM     = 2;
+    EBT_FASHION = 3;
+    EBT_CHIP    = 4;
+    EBT_RUNE    = 5;
+    EBT_TASK    = 6;
+    EBT_SOUL    = 7;
+    EBT_CARD    = 8;  //英雄卡
+}
+
+enum EFunctionType{
+    FUNC_BEGIN_ID  = 0;  //!功能ID开始标记
+    
+    FUNC_END_ID = 150; //!功能ID结束标记
+}
+
+
+enum EAttrID{
+    EA_HP            = 0;  //生命值
+    EA_MP            = 1;  //魔法值
+    EA_HP_MAX        = 2;  //最大生命值
+    EA_MP_MAX        = 3;  //最大魔法值
+    EA_SPEED         = 4;  //移动速度
+    EA_ATTACK        = 5;  //攻击
+    EA_ELEMENT       = 6;  //元素伤害
+    EA_MAGIC_DEF     = 7;  //魔防
+    EA_PHYSIC_DEF    = 8;  //物防
+    EA_HIT_RATE      = 9; //命中
+    EA_DODGE         = 10; //闪避
+    EA_MORE_HURT     = 11; //伤害加深
+    EA_LESS_HURT     = 12; //伤害减免
+    EA_CRIT_HIT      = 13; //暴击
+    EA_CRIT_DEF      = 14; //抗暴
+    EA_CRIT_HURT     = 15; //暴伤
+    EA_ATTR_NUM      = 16; //属性个数
+}
+
+enum EShip
+{
+    ES_NEUTRAL =  0;
+    ES_FRIEND  =  1;
+    ES_ENEMY   =  2;
+}
+
+enum EHitShipType
+{
+    EHST_ALL        = 0;      // 全部目标
+    EHST_FRIEND     = 1;      // 需要目标是友方才能释放
+    EHST_ENEMY      = 2;      // 需要目标是敌方才能释放
+}
+
+enum EBuffType{
+    BFT_NONE        = 0; 
+}
+
+enum EChatChannel{
+    CHL_NONE        = 0; 
+    CHL_WORLD       = 1;//世界聊天
+    CHL_PRIVATE     = 2;//私聊
+    CHL_GUILD       = 3;//公会
+    CHL_GM          = 4;//GM命令
+}
+
+enum EEquipPos{
+    EEP_NONE        = 0; 
+    EEP_HELMET      = 1; 
+    EEP_NECKLACE    = 2; 
+    EEP_ARMOR       = 3; 
+    EEP_SHOES       = 4; 
+    EEP_WRIST       = 5; 
+    EEP_RING        = 6; 
+    EEP_TALISMAN    = 7; 
+    EEP_WEAPON      = 8; 
+}
+
+enum ETaskStatus{
+    ETS_INIT        = 0; 
+    ETS_ACCEPT      = 1; 
+    ETS_FINISH      = 2; 
+    ETS_COMMIT      = 3;
+}
+
+//副本战斗结果
+enum ECopyResult
+{
+	ECR_NONE    = 0;    //未结算
+	ECR_WIN     = 1;    //胜利
+	ECR_LOST    = 2;    //失败
+	ECR_DRAW    = 3;    //平局
+};
+
